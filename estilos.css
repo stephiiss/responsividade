@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+header {
+    height: 4rem;
+    /*altura do elemento */
+    background-color: #ff8fa3;
+    /*cor de fundo*/
+    display: flex;
+    /*transformar em caixa flexivel*/
+    flex-direction: row;
+    /*posição dos elementos */
+    align-items: center;
+    /*alinhar os elementos*/
+    justify-content: space-between;
+    /*determina se o filho fica a diretita, esquerda ou meio*/
+    padding: 0 5%;
+    /*margem interna*/
+
+}
+
+header .logo {
+    height: 70%;
+}
+
+header a {
+    color: white;
+    transition: color 0.s;
+}
+
+header a :hover {
+    color: yellow;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .botaomenu {
+    height: 2.5rem;
+    width: 3rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px 5px;
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /*mudar o cursor quando passar o mouse em cima*/
+    transition: background 0.5s;
+}
+
+header .botaomenu:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+header .botaomenu div {
+    height: 3px;
+    width: 60%;
+    background-color: white;
+    border-radius: 50px;
+    transition: background 0.5s, transform 0.5s;
+
+
+}
+
+header .botaomenu:hover div {
+    background-color: #F0E68C;
+}
+
+header .botaomenu:hover .ret1 {
+    transform: translateX(-0.2rem);
+
+}
+
+header .botaomenu:hover .ret2 {
+    transform: translateX(0.2rem);
+
+}
+
+header .botaomenu:hover .ret3 {
+    transform: translateX(-0.3rem);
+
+}
+
+@media screen and (max-width: 950px) {
+
+    header .botaomenu {
+        display: flex;
+
+    }
+
+    header nav {
+      position: fixed;
+      background-color: #ffccd5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 3rem;
+
+    }
+
+    header a {
+        color: rgb(100, 100, 100);
+    
+    }
+    
+    header a :hover {
+        color: rgb(122, 38, 5);
+    }
+
+    header nav a {
+        border-bottom: 1px solid rgb(220, 220, 220);
+        display: flex;
+        width: 100%;
+        padding: 1rem 0.5rem;
+        transition: background 0.5s;
+    }
+
+    header nav a:hover {
+        background-color: white;
+    }
+}

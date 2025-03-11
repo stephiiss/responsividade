@@ -48,6 +48,15 @@ header nav {
     gap: 0.5rem;
 }
 
+header .creditos {
+    display: none;
+}
+
+header .topoMenu {
+    display: none;
+
+}
+
 header .botaomenu {
     height: 2.5rem;
     width: 3rem;
@@ -108,13 +117,36 @@ header .botaomenu:hover .ret3 {
       position: fixed;
       background-color: #ffccd5;
       top: 0;
-      right: 0;
       bottom: 0;
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
       padding: 3rem;
+      width: 100%;
+      right: -100%;
+      transition: right 0.5s;
+      z-index: 1;
+    }
+ 
+    header .topoMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1rem;
+        
+    }
 
+    header .creditos {
+        display: block;
+        margin: 1rem;
+    }
+
+    header .fecharMenu {
+        border: none;
+        background-color: transparent;
+        color: rebeccapurple;
+        cursor: pointer;
     }
 
     header a {

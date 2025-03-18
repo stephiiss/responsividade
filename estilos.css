@@ -1,3 +1,12 @@
+:root {
+    --laranja: #FF4800;
+    --bege: #edede9;
+    --amarelo: #e9c46a;
+    --preto: #000000;
+    --laranjaE: #FF7900;
+    --laranjinha: #f4a261;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +23,7 @@
 header {
     height: 4rem;
     /*altura do elemento */
-    background-color: #ff8fa3;
+    background-image: linear-gradient(90deg, var(--laranja), var(--laranjaE));
     /*cor de fundo*/
     display: flex;
     /*transformar em caixa flexivel*/
@@ -39,7 +48,7 @@ header a {
 }
 
 header a :hover {
-    color: yellow;
+    color: var(--amarelo);
 }
 
 header nav {
@@ -74,7 +83,7 @@ header .botaomenu {
 }
 
 header .botaomenu:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color:var(--preto);
 }
 
 header .botaomenu div {
@@ -88,7 +97,7 @@ header .botaomenu div {
 }
 
 header .botaomenu:hover div {
-    background-color: #F0E68C;
+    background-color: var(--laranjaE);
 }
 
 header .botaomenu:hover .ret1 {
@@ -106,6 +115,23 @@ header .botaomenu:hover .ret3 {
 
 }
 
+.slogan {
+    display: flex;
+    background-color: var(--bege);
+    text-align: center;
+    color: var(--laranja);
+    height: 3rem;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.secaoBanner {
+    background-color: var(--amarelo);
+    height: calc(100vh - 7rem);
+}
+
 @media screen and (max-width: 950px) {
 
     header .botaomenu {
@@ -115,7 +141,7 @@ header .botaomenu:hover .ret3 {
 
     header nav {
       position: fixed;
-      background-color: #ffccd5;
+      background-color: var(--laranjinha);
       top: 0;
       bottom: 0;
       flex-direction: column;
@@ -145,12 +171,12 @@ header .botaomenu:hover .ret3 {
     header .fecharMenu {
         border: none;
         background-color: transparent;
-        color: rebeccapurple;
+        color: var(--laranjaE);
         cursor: pointer;
     }
 
     header a {
-        color: rgb(100, 100, 100);
+        color: var(--preto);
     
     }
     
@@ -159,7 +185,7 @@ header .botaomenu:hover .ret3 {
     }
 
     header nav a {
-        border-bottom: 1px solid rgb(220, 220, 220);
+        border-bottom: 1px solid var(--bege);
         display: flex;
         width: 100%;
         padding: 1rem 0.5rem;

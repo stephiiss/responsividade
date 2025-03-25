@@ -1,10 +1,10 @@
 :root {
-    --laranja: #FF4800;
+    --rosa: #FB6F92;
     --bege: #edede9;
-    --amarelo: #e9c46a;
+    --rosaC: #FF8FAB;
     --preto: #000000;
-    --laranjaE: #FF7900;
-    --laranjinha: #f4a261;
+    --rosaE: #ff0a54;
+    --rosinha: #FFE5EC;
 }
 
 * {
@@ -23,7 +23,7 @@
 header {
     height: 4rem;
     /*altura do elemento */
-    background-image: linear-gradient(90deg, var(--laranja), var(--laranjaE));
+    background-image: linear-gradient(90deg, var(--rosa), var(--rosaE));
     /*cor de fundo*/
     display: flex;
     /*transformar em caixa flexivel*/
@@ -48,7 +48,7 @@ header a {
 }
 
 header a :hover {
-    color: var(--amarelo);
+    color: var(--rosaC);
 }
 
 header nav {
@@ -97,7 +97,7 @@ header .botaomenu div {
 }
 
 header .botaomenu:hover div {
-    background-color: var(--laranjaE);
+    background-color: var(--rosaE,);
 }
 
 header .botaomenu:hover .ret1 {
@@ -119,7 +119,7 @@ header .botaomenu:hover .ret3 {
     display: flex;
     background-color: var(--bege);
     text-align: center;
-    color: var(--laranja);
+    color: var(--rosaE);
     height: 3rem;
     padding: 0 5%;
     align-items: center;
@@ -128,8 +128,52 @@ header .botaomenu:hover .ret3 {
 }
 
 .secaoBanner {
-    background-color: var(--amarelo);
+    background-image: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: calc(100vh - 7rem);
+    padding: 3rem 5%;
+    display: flex;
+    align-items: center;
+}
+
+.textodestaque {
+    font-size: 4rem;
+}
+
+.secaoBanner .textos {
+    width: min(50rem, 100%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    color: var(--rosaE);
+    border: 2px solid var(--rosinha);
+    border-radius: 20px;
+}
+
+.secaoBanner .textos h1 {
+    margin-bottom: 1rem;
+}
+
+.indexprincipal {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.indexprincipal .ladoesquerdo {
+width: 25%;
+
+}
+.indexprincipal .ladodireito {
+    width: 75%;
+
+}
+
+
+footer {
+    background-color: var(--rosaC);
+    padding: 1rem 5%;
 }
 
 @media screen and (max-width: 950px) {
@@ -141,7 +185,7 @@ header .botaomenu:hover .ret3 {
 
     header nav {
       position: fixed;
-      background-color: var(--laranjinha);
+      background-color: var(--rosinha);
       top: 0;
       bottom: 0;
       flex-direction: column;
@@ -171,7 +215,7 @@ header .botaomenu:hover .ret3 {
     header .fecharMenu {
         border: none;
         background-color: transparent;
-        color: var(--laranjaE);
+        color: var(--rosaE);
         cursor: pointer;
     }
 
@@ -195,4 +239,20 @@ header .botaomenu:hover .ret3 {
     header nav a:hover {
         background-color: white;
     }
+
+    .textodestaque{
+        font-size: 2rem;
+    }
+
+    .indexprincipal{
+    flex-direction: column;
+    
+    }
+
+    .indexprincipal .ladoesquerdo
+    .indexprincipal .ladodireito{
+        width: 100%;
+        
+    }
+
 }

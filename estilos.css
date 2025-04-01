@@ -1,258 +1,425 @@
+/* Definição das variáveis de cores para uso em todo o código */
 :root {
     --rosa: #FB6F92;
+    /* Cor rosa principal */
     --bege: #edede9;
+    /* Cor bege clara */
     --rosaC: #FF8FAB;
+    /* Cor rosa mais claro para destaque */
     --preto: #000000;
+    /* Cor preta */
     --rosaE: #ff0a54;
+    /* Cor rosa de destaque */
     --rosinha: #FFE5EC;
+    /* Cor rosa muito clara */
 }
 
+/* Reset de estilo básico e configuração de fontes */
 * {
     margin: 0;
+    /* Remove margens externas */
     padding: 0;
+    /* Remove preenchimento interno */
     box-sizing: border-box;
+    /* Garante que padding e bordas sejam incluídos nas dimensões */
     font-family: Arial, Helvetica, sans-serif;
+    /* Define uma fonte padrão */
     font-family: "Raleway", serif;
+    /* Outra fonte como fallback */
     font-optical-sizing: auto;
+    /* Ajusta o tamanho da fonte automaticamente */
     font-weight: 400;
+    /* Peso normal da fonte */
     font-style: normal;
-
-
+    /* Define o estilo da fonte como normal */
 }
 
+/* Estilo do cabeçalho (header) */
 header {
     height: 4rem;
-    /*altura do elemento */
+    /* Define a altura do cabeçalho */
     background-image: linear-gradient(90deg, var(--rosa), var(--rosaE));
-    /*cor de fundo*/
+    /* Gradiente de fundo com as cores rosa e rosaE */
     display: flex;
-    /*transformar em caixa flexivel*/
+    /* Usa display flex para organizar os elementos dentro do cabeçalho */
     flex-direction: row;
-    /*posição dos elementos */
+    /* Organiza os elementos em linha (horizontalmente) */
     align-items: center;
-    /*alinhar os elementos*/
+    /* Alinha os itens verticalmente no centro */
     justify-content: space-between;
-    /*determina se o filho fica a diretita, esquerda ou meio*/
+    /* Distribui os itens com espaçamento entre eles */
     padding: 0 5%;
-    /*margem interna*/
-
+    /* Adiciona padding horizontal de 5% */
 }
 
+/* Estilo do logo dentro do cabeçalho */
 header .logo {
     height: 70%;
+    /* Define a altura do logo para 70% da altura do cabeçalho */
 }
 
+/* Estilo dos links dentro do cabeçalho */
 header a {
     color: white;
-    transition: color 0.s;
+    /* Define a cor dos links como branca */
+    transition: color 0s;
+    /* Não há transição no link */
 }
 
+/* Efeito de hover nos links */
 header a :hover {
     color: var(--rosaC);
+    /* Muda a cor do link para rosaC quando o usuário passa o mouse sobre ele */
 }
 
+/* Estilo do menu de navegação no cabeçalho */
 header nav {
     display: flex;
+    /* Organiza os itens do menu como flex */
     align-items: center;
+    /* Alinha os itens verticalmente no centro */
     gap: 0.5rem;
+    /* Adiciona um espaço de 0.5rem entre os itens do menu */
 }
 
+/* Estilo da área de créditos e topo do menu (invisíveis inicialmente) */
 header .creditos {
     display: none;
+    /* Esconde a área de créditos */
 }
 
 header .topoMenu {
     display: none;
-
+    /* Esconde o topo do menu */
 }
 
+/* Estilo do botão de menu (hamburger menu) */
 header .botaomenu {
     height: 2.5rem;
+    /* Altura do botão */
     width: 3rem;
+    /* Largura do botão */
     background-color: transparent;
+    /* Fundo transparente */
     border: none;
+    /* Sem borda */
     border-radius: 5px 5px;
+    /* Bordas arredondadas */
     display: none;
+    /* Esconde o botão inicialmente */
     flex-direction: column;
+    /* Organiza as "barras" do menu verticalmente */
     gap: 0.4rem;
+    /* Espaço entre as "barras" */
     align-items: center;
+    /* Alinha as "barras" no centro */
     justify-content: center;
+    /* Alinha as "barras" no centro */
     cursor: pointer;
-    /*mudar o cursor quando passar o mouse em cima*/
+    /* Torna o cursor um ponteiro para indicar que é clicável */
     transition: background 0.5s;
+    /* Transição suave na mudança de cor de fundo */
 }
 
+/* Efeito de hover no botão de menu */
 header .botaomenu:hover {
-    background-color:var(--preto);
+    background-color: var(--preto);
+    /* Muda o fundo para preto quando o botão é hovered */
 }
 
+/* Estilo das "barras" dentro do botão de menu */
 header .botaomenu div {
     height: 3px;
+    /* Largura das "barras" */
     width: 60%;
+    /* Largura das "barras" em relação ao botão */
     background-color: white;
+    /* Cor das "barras" */
     border-radius: 50px;
+    /* Bordas arredondadas */
     transition: background 0.5s, transform 0.5s;
-
-
+    /* Transição suave para a mudança de cor e movimento */
 }
 
+/* Efeito de hover nas "barras" do botão de menu */
 header .botaomenu:hover div {
-    background-color: var(--rosaE,);
+    background-color: var(--rosaE);
+    /* Muda a cor das barras para rosaE no hover */
 }
 
+/* Efeitos de movimento das "barras" durante o hover */
 header .botaomenu:hover .ret1 {
     transform: translateX(-0.2rem);
-
+    /* Move a primeira barra para a esquerda */
 }
 
 header .botaomenu:hover .ret2 {
     transform: translateX(0.2rem);
-
+    /* Move a segunda barra para a direita */
 }
 
 header .botaomenu:hover .ret3 {
     transform: translateX(-0.3rem);
-
+    /* Move a terceira barra para a esquerda */
 }
 
+/* Estilo do corpo da página */
+body {
+    background-color: var(--rosinha);
+    /* Define o fundo da página como rosinha */
+}
+
+/* Estilo da seção de slogan */
 .slogan {
     display: flex;
+    /* Usa flexbox para organizar os itens */
     background-color: var(--bege);
+    /* Fundo bege */
     text-align: center;
+    /* Alinha o texto ao centro */
     color: var(--rosaE);
+    /* Cor do texto rosaE */
     height: 3rem;
+    /* Altura do slogan */
     padding: 0 5%;
+    /* Padding horizontal de 5% */
     align-items: center;
+    /* Alinha verticalmente ao centro */
     justify-content: center;
-
+    /* Alinha horizontalmente ao centro */
 }
 
+/* Estilo da seção de banner */
 .secaoBanner {
     background-image: url(img/banner.jpg);
+    /* Define a imagem de fundo */
     background-repeat: no-repeat;
+    /* Impede repetição da imagem */
     background-size: cover;
+    /* Faz a imagem cobrir toda a área */
     background-position: center;
+    /* Centraliza a imagem */
     height: calc(100vh - 7rem);
+    /* Altura do banner, subtraindo a altura do cabeçalho */
     padding: 3rem 5%;
+    /* Padding de 3rem vertical e 5% horizontal */
     display: flex;
+    /* Organiza os itens com flexbox */
     align-items: center;
+    /* Alinha os itens verticalmente ao centro */
 }
 
+/* Estilo do texto de destaque no banner */
 .textodestaque {
     font-size: 4rem;
+    /* Define o tamanho da fonte */
 }
 
+/* Estilo da área de textos dentro do banner */
 .secaoBanner .textos {
     width: min(50rem, 100%);
+    /* Define a largura máxima como 50rem ou 100% */
     background-color: rgba(255, 255, 255, 0.7);
+    /* Fundo branco com transparência */
     padding: 2rem;
+    /* Padding interno */
     color: var(--rosaE);
+    /* Cor do texto rosaE */
     border: 2px solid var(--rosinha);
+    /* Borda rosa clara */
     border-radius: 20px;
+    /* Bordas arredondadas */
 }
 
+/* Estilo do título dentro da área de texto do banner */
 .secaoBanner .textos h1 {
     margin-bottom: 1rem;
+    /* Margem abaixo do título */
 }
 
+/* Estilo da seção principal da página */
 .indexprincipal {
     display: flex;
+    /* Organiza os itens com flexbox */
     gap: 2rem;
+    /* Espaço de 2rem entre os itens */
     padding: 2rem 5%;
+    /* Padding de 2rem vertical e 5% horizontal */
 }
 
+/* Estilo do lado esquerdo da seção principal */
 .indexprincipal .ladoesquerdo {
-width: 25%;
-
+    width: 25%;
+    /* Largura de 25% para o lado esquerdo */
 }
+
+/* Estilo do lado direito da seção principal */
 .indexprincipal .ladodireito {
     width: 75%;
-
+    /* Largura de 75% para o lado direito */
 }
 
+/* Estilo para o container de produtos */
+.containerprodutos {
+    display: flex;
+    /* Organiza os produtos com flexbox */
+    flex-wrap: wrap;
+    /* Permite que os produtos "quebrem" para a linha seguinte */
+    gap: 1rem;
+    /* Espaço entre os produtos */
+    margin: 1.5rem 0;
+}
 
+/* Estilo do card de produto */
+.containerprodutos .card {
+    width: calc(33% - 1rem);
+    /* Largura de 33% para os cards de produto */
+    background-color: white;
+    /* Fundo branco */
+    overflow: hidden;
+    /* Impede o conteúdo de sair do card */
+    border-radius: 20px;
+    /* Bordas arredondadas */
+    box-shadow: 0px 10px 10px var(--rosaC);
+    transition: box-shadow 0.5s;
+}
+
+.containerprodutos .card:hover{
+    box-shadow: 0 20px 25px var(--rosa);
+}
+
+/* Estilo das imagens dentro dos cards */
+.containerprodutos .card img {
+    width: 100%;
+    /* Imagem ocupa toda a largura do card */
+}
+
+/* Estilo do título dentro dos cards */
+.containerprodutos .card h3 {
+    margin: 1rem 1rem 0.5rem 1rem;
+    /* Margens ao redor do título */
+    color: var(--rosaE);
+    /* Cor do título rosaE */
+}
+
+/* Estilo da descrição dentro dos cards */
+.containerprodutos .card p {
+    margin: 0 1rem 1rem 1rem;
+    /* Margens ao redor do texto */
+}
+
+/* Estilo do rodapé da página */
 footer {
     background-color: var(--rosaC);
+    /* Cor de fundo rosaC */
     padding: 1rem 5%;
+    /* Padding de 1rem vertical e 5% horizontal */
 }
 
+/* Estilos para dispositivos com tela pequena (max-width: 950px) */
 @media screen and (max-width: 950px) {
 
+    /* Exibe o botão de menu para telas pequenas */
     header .botaomenu {
         display: flex;
-
     }
 
+    /* Estilo do menu de navegação para telas pequenas */
     header nav {
-      position: fixed;
-      background-color: var(--rosinha);
-      top: 0;
-      bottom: 0;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0;
-      padding: 3rem;
-      width: 100%;
-      right: -100%;
-      transition: right 0.5s;
-      z-index: 1;
+        position: fixed;
+        /* Fixar o menu no topo */
+        background-color: var(--rosinha);
+        /* Fundo rosinha */
+        top: 0;
+        /* Fixa no topo */
+        bottom: 0;
+        /* Fixa até o fundo */
+        flex-direction: column;
+        /* Organiza os itens verticalmente */
+        align-items: flex-start;
+        /* Alinha à esquerda */
+        gap: 0;
+        /* Remove o espaçamento entre os itens */
+        padding: 3rem;
+        /* Padding interno de 3rem */
+        width: 100%;
+        /* Largura total */
+        right: -100%;
+        /* Esconde o menu fora da tela inicialmente */
+        transition: right 0.5s;
+        /* Transição suave na animação de abrir o menu */
+        z-index: 1;
+        /* Coloca o menu acima de outros elementos */
     }
- 
+
+    /* Estilo do topo do menu */
     header .topoMenu {
         display: flex;
+        /* Exibe os itens como flexbox */
         align-items: center;
+        /* Alinha verticalmente ao centro */
         justify-content: space-between;
+        /* Espaçamento entre os itens */
         width: 100%;
+        /* Largura total */
         margin-bottom: 1rem;
-        
+        /* Margem inferior */
     }
 
+    /* Exibe os créditos no menu */
     header .creditos {
         display: block;
         margin: 1rem;
+        /* Margem ao redor */
     }
 
-    header .fecharMenu {
-        border: none;
-        background-color: transparent;
-        color: var(--rosaE);
-        cursor: pointer;
-    }
-
+    /* Estilo do link no menu */
     header a {
         color: var(--preto);
-    
+        /* Cor preta */
     }
-    
+
+    /* Estilo do hover no link */
     header a :hover {
         color: rgb(122, 38, 5);
+        /* Cor do link no hover */
     }
 
+    /* Estilo dos links no menu */
     header nav a {
         border-bottom: 1px solid var(--bege);
+        /* Borda inferior do link */
         display: flex;
+        /* Organiza os links com flexbox */
         width: 100%;
+        /* Largura total */
         padding: 1rem 0.5rem;
+        /* Padding ao redor do link */
         transition: background 0.5s;
+        /* Transição suave no hover */
     }
 
+    /* Efeito de hover nos links do menu */
     header nav a:hover {
         background-color: white;
+        /* Muda o fundo para branco no hover */
     }
 
-    .textodestaque{
+    /* Reduz o tamanho da fonte do texto de destaque */
+    .textodestaque {
         font-size: 2rem;
+        /* Tamanho de fonte menor */
     }
 
-    .indexprincipal{
-    flex-direction: column;
-    
+    /* Estilo da seção principal para telas pequenas */
+    .indexprincipal {
+        flex-direction: column;
+        /* Organiza os itens verticalmente */
     }
 
-    .indexprincipal .ladoesquerdo
-    .indexprincipal .ladodireito{
+    /* Ajuste de largura nos elementos da seção principal */
+    .indexprincipal .ladoesquerdo .indexprincipal .ladodireito {
         width: 100%;
-        
+        /* Largura de 100% para ambos os lados */
     }
-
 }

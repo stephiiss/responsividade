@@ -12,6 +12,7 @@
     /* Cor rosa de destaque */
     --rosinha: #FFE5EC;
     /* Cor rosa muito clara */
+    --rosacinza: #e2afbf;
 }
 
 /* Reset de estilo básico e configuração de fontes */
@@ -261,10 +262,8 @@ body {
 
 /* Estilo para o container de produtos */
 .containerprodutos {
-    display: flex;
-    /* Organiza os produtos com flexbox */
-    flex-wrap: wrap;
-    /* Permite que os produtos "quebrem" para a linha seguinte */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     /* Espaço entre os produtos */
     margin: 1.5rem 0;
@@ -272,7 +271,7 @@ body {
 
 /* Estilo do card de produto */
 .containerprodutos .card {
-    width: calc(33% - 1rem);
+    /* width: calc(33% - 1rem); */
     /* Largura de 33% para os cards de produto */
     background-color: white;
     /* Fundo branco */
@@ -284,7 +283,7 @@ body {
     transition: box-shadow 0.5s;
 }
 
-.containerprodutos .card:hover{
+.containerprodutos .card:hover {
     box-shadow: 0 20px 25px var(--rosa);
 }
 
@@ -314,6 +313,27 @@ footer {
     /* Cor de fundo rosaC */
     padding: 1rem 5%;
     /* Padding de 1rem vertical e 5% horizontal */
+}
+
+.listafiltros {
+    list-style-type: none;
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+}
+
+.listafiltros li {
+    border: 1px solid var(--rosacinza);
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+}
+
+.listafiltros li:hover {
+    background-color: white;
+    color: var(--rosaE);
 }
 
 /* Estilos para dispositivos com tela pequena (max-width: 950px) */
@@ -422,4 +442,43 @@ footer {
         width: 100%;
         /* Largura de 100% para ambos os lados */
     }
+
+    .containerprodutos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .listafiltros {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+    .containerprodutos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+@media screen and (max-width: 650px) {
+    .containerprodutos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .listafiltros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .containerprodutos {
+        grid-template-columns: 1fr;
+    }
+
+    .listafiltros {
+        grid-template-columns: 1fr;
+    }
+
 }
